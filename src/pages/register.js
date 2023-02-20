@@ -12,7 +12,7 @@ function Register() {
     const onFinish = async () => {
         try {
             console.log(user)
-            const res = await axios.post('http://localhost:3500/api/register', { user, password })
+            const res = await axios.post('https://contacts-api-a7x0.onrender.com/api/register', { user, password })
             console.log(res.data)
             toast(res.data.message)
             if (res.data.userr) {

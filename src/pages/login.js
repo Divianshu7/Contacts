@@ -11,7 +11,7 @@ function Login() {
     const navigate = useNavigate()
     const onFinish = async () => {
         try {
-            const res = await axios.post('http://localhost:3500/api/login', { user, password })
+            const res = await axios.post('https://contacts-api-a7x0.onrender.com/api/login', { user, password })
             toast(res.data.message)
             if (res.data.savedUser) {
                 localStorage.setItem('test-user', res.data.savedUser)
